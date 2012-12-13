@@ -1,4 +1,4 @@
- RUBY ASSIGNMENT SOLUTION:
+                                      RUBY ASSIGNMENT SOLUTION:
 
 String 1 :
 RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag.
@@ -15,6 +15,7 @@ irb(main):002:0> string1.scan("RUBY")
 irb(main):003:0> string1.scan("RUBY").count
 => 3
 
+
 2. Find the position where RUBY occures in the string 1.
 ans 2:
 <e code it finds until it runs into a RUBY closing <br/> tag."
@@ -25,7 +26,9 @@ he code it finds until it runs into a RUBY closing <br/> tag."
 => [0, 112, 194]
 irb(main):003:0>
 
+
 3. Create array of words in string 1 & print them using a recursive function.
+
 
 4. Capitalise string 1
 ans 4: <e code it finds until it runs into a RUBY closing <br/> tag."
@@ -83,6 +86,7 @@ aration; a variable's type is determined by the context in which the variable is
  used.\n"
 irb(main):007:0>
 
+
 7. Print current date
 ans 7: 
 irb(main):001:0> t1=Time.new
@@ -92,6 +96,7 @@ irb(main):003:0> puts t1.strftime("%Y-%m-%d")
 => nil
 irb(main):004:0>
 
+
 8. print 12th Jan 2012
 ans 8: 
 irb(main):001:0> t1=Time.new
@@ -99,6 +104,7 @@ irb(main):004:0> puts t1.strftime("12-jan-%Y")
 12-jan-2012
 => nil
 irb(main):005:0>
+
 
 9. add 7 days in current date
 ans 9: 
@@ -108,7 +114,9 @@ irb(main):006:0> Time.gm(t.year,t.month,t.day+7)
 => 2012-12-20 00:00:00 UTC
 irb(main):007:0>
 
+
 10. Cut the string 1 into 4 parts & print it.
+
 
 11. Divide the string 1 by occurances of '.'. Combine the array in reverse word sequence
 
@@ -161,6 +169,7 @@ It also provides methods for accessing commonly-used HTTP header values in more 
 
 18. Redirect page 1 to page 2.
 
+
 19. Compare two dates. (12-4-2010 & 12-5-2011). Calculate the days between these two dates.
 ans 19:
 irb(main):001:0> require 'date'
@@ -185,6 +194,7 @@ ans 20:
 irb(main):006:0> Time.now+(20*24*60*60)
 => 2013-01-02 17:52:01 +0530
 irb(main):007:0>
+
 
 21. Print date in array format.
 ans 21:
