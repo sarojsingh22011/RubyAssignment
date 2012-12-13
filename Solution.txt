@@ -1,0 +1,196 @@
+ RUBY ASSIGNMENT SOLUTION:
+
+String 1 :
+RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag.
+String 2 :
+RUBY does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the variable is used.
+
+1. Find occurance of RUBY from string 1.
+ans 1: string1="RUBY parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as RUBY code. The parser then executes all of the code it finds until it runs into a RUBY closing <br/> tag."
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+irb(main):002:0> string1.scan("RUBY")
+=> ["RUBY", "RUBY", "RUBY"]
+irb(main):003:0> string1.scan("RUBY").count
+=> 3
+
+2. Find the position where RUBY occures in the string 1.
+ans 2:
+<e code it finds until it runs into a RUBY closing <br/> tag."
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+<tring1.enum_for(:scan,/RUBY/).map{Regexp.last_match.begin(0)}
+=> [0, 112, 194]
+irb(main):003:0>
+
+3. Create array of words in string 1 & print them using a recursive function.
+
+4. Capitalise string 1
+ans 4: <e code it finds until it runs into a RUBY closing <br/> tag."
+=> "rUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+irb(main):002:0> string1.capitalize
+=> "Ruby parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as ruby code. the parser then executes all of t
+he code it finds until it runs into a ruby closing <br/> tag."
+irb(main):003:0>
+
+
+5. Combine string 1 & 2.
+ans 5: <e code it finds until it runs into a RUBY closing <br/> tag."
+=> "rUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+irb(main):002:0> string1.capitalize
+=> "Ruby parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as ruby code. the parser then executes all of t
+he code it finds until it runs into a ruby closing <br/> tag."
+< determined by the context in which the variable is used."
+=> "RUBY does not require (or support) explicit type definition in variable decl
+aration; a variable's type is determined by the context in which the variable is
+ used."
+irb(main):004:0> string1+string2
+=> "rUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag.RUBY does not requi
+re (or support) explicit type definition in variable declaration; a variable's t
+ype is determined by the context in which the variable is used."
+irb(main):005:0> string1.concat(string2)
+=> "rUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag.RUBY does not requi
+re (or support) explicit type definition in variable declaration; a variable's t
+ype is determined by the context in which the variable is used."
+irb(main):006:0>
+
+
+6. Print string 1 & 2 using heredoc.
+ans 6:
+irb(main):001:0> string1=<<-"here document ends"
+< finds until it runs into a RUBY closing <br/> tag.
+irb(main):003:0" here document ends
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag.\n"
+irb(main):004:0> string2=<<-"here document ends"
+<ariable's type is determined by the context in which the variable is used.
+irb(main):006:0" here document ends
+=> "RUBY does not require (or support) explicit type definition in variable decl
+aration; a variable's type is determined by the context in which the variable is
+ used.\n"
+irb(main):007:0>
+
+7. Print current date
+ans 7: 
+irb(main):001:0> t1=Time.new
+=> 2012-12-13 17:26:09 +0530
+irb(main):003:0> puts t1.strftime("%Y-%m-%d")
+2012-12-13
+=> nil
+irb(main):004:0>
+
+8. print 12th Jan 2012
+ans 8: 
+irb(main):001:0> t1=Time.new
+irb(main):004:0> puts t1.strftime("12-jan-%Y")
+12-jan-2012
+=> nil
+irb(main):005:0>
+
+9. add 7 days in current date
+ans 9: 
+irb(main):005:0> t=Time.now()
+=> 2012-12-13 17:34:26 +0530
+irb(main):006:0> Time.gm(t.year,t.month,t.day+7)
+=> 2012-12-20 00:00:00 UTC
+irb(main):007:0>
+
+10. Cut the string 1 into 4 parts & print it.
+
+11. Divide the string 1 by occurances of '.'. Combine the array in reverse word sequence
+
+12. Remove the HTML characters from string.
+
+13. Print the 'RUBY' word from string 1 by traversing it using string functions.
+ans 13:
+<e code it finds until it runs into a RUBY closing <br/> tag."
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+irb(main):002:0> string1.scan("RUBY")
+=> ["RUBY", "RUBY", "RUBY"]
+irb(main):003:0>
+
+14. Find the length of string 1 & 2.
+ans 14:
+<e code it finds until it runs into a RUBY closing <br/> tag."
+=> "RUBY parses a file by looking for <br/> one of the special tags that tells i
+t to start interpreting the text as RUBY code. The parser then executes all of t
+he code it finds until it runs into a RUBY closing <br/> tag."
+irb(main):002:0> string1.length
+=> 217
+< determined by the context in which the variable is used."
+=> "RUBY does not require (or support) explicit type definition in variable decl
+aration; a variable's type is determined by the context in which the variable is
+ used."
+irb(main):004:0> string2.length
+=> 162
+irb(main):005:0>
+
+15. Create file & write string 1 to that file using RUBY functions.
+
+16. Print all Global varibles provided by RUBY.
+ans 16:
+irb(main):003:0> global_variables
+=> [:$;, :$-F, :$@, :$!, :$SAFE, :$~, :$&, :$`, :$', :$+, :$=, :$KCODE, :$-K, :$
+,, :$/, :$-0, :$\, :$_, :$stdin, :$stdout, :$stderr, :$>, :$<, :$., :$FILENAME,
+:$-i, :$*, :$?, :$$, :$:, :$-I, :$LOAD_PATH, :$", :$LOADED_FEATURES, :$VERBOSE,
+:$-v, :$-w, :$-W, :$DEBUG, :$-d, :$0, :$PROGRAM_NAME, :$-p, :$-l, :$-a, :$bindin
+g, :$1, :$2, :$3, :$4, :$5, :$6, :$7, :$8, :$9]
+irb(main):004:0>
+
+17. Usage and examples of Header (RUBY).
+ans 17:
+USAGE:The HTTPHeader module defines methods for reading and writing HTTP headers.
+It is used as a mixin by other classes, to provide hash-like access to HTTP header values.
+Unlike raw hash access, HTTPHeader provides access via case-insensitive keys. 
+It also provides methods for accessing commonly-used HTTP header values in more convenient formats.
+
+18. Redirect page 1 to page 2.
+
+19. Compare two dates. (12-4-2010 & 12-5-2011). Calculate the days between these two dates.
+ans 19:
+irb(main):001:0> require 'date'
+=> true
+irb(main):002:0> d1=DateTime.now
+=> #<DateTime: 2012-12-13T18:32:35+05:30 ((2456275j,46955s,785922000n),+19800s,2
+299161j)>
+irb(main):003:0> d1=Date.new(2011,5,12)
+=> #<Date: 2011-05-12 ((2455694j,0s,0n),+0s,2299161j)>
+irb(main):004:0> d2=Date.new(2010,4,12)
+=> #<Date: 2010-04-12 ((2455299j,0s,0n),+0s,2299161j)>
+irb(main):005:0> diff=d1-d2
+=> (395/1)
+irb(main):006:0> diff.to_i
+=> 395
+irb(main):007:0> diff.to_i*60*60
+=> 1422000
+
+
+20. Print date after 20 days from current date.
+ans 20:
+irb(main):006:0> Time.now+(20*24*60*60)
+=> 2013-01-02 17:52:01 +0530
+irb(main):007:0>
+
+21. Print date in array format.
+ans 21:
+irb(main):005:0> t1=Time.now
+=> 2012-12-13 18:21:51 +0530
+irb(main):006:0> values=t1.to_a
+=> [51, 21, 18, 13, 12, 2012, 4, 348, false, "India Standard Time"]
+irb(main):007:0>
+
