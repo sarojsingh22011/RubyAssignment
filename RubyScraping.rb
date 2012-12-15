@@ -17,28 +17,22 @@ doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content"
   break if i == 10;
  end
 
-$arr1.each do |a1|
-puts a1
-end
+#$arr1.each do |a1|
+#puts a1
+#end
 
-$arr2.each do |a2|
-puts a2
-end
+#$arr2.each do |a2|
+#puts a2
+#end
 
 ActiveRecord::Base.establish_connection(
 :adapter=>"mysql",
 :host=>"localhost",
-:database=>"students"
-:username=>saroj
-:password=>saroj
+:database=>"recipes"
 )
 
-class recipetables < ActiveRecord::Base
+class recipetable < ActiveRecord::Base
 end
-
-recipetables.create()
-recipetables.create()
-recipetables.create()
-
-
-
+for i in 1..10
+recipetable.create(:id => #{i}, :recipe_list => "arr1[#{i}]")
+end
