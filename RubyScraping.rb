@@ -17,7 +17,6 @@ doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content"
   break if i == 10;
  end
 
-
 $arr1.each do |a1|
 puts a1
 end
@@ -34,12 +33,12 @@ ActiveRecord::Base.establish_connection(
 :password=>saroj
 )
 
-class Rubyist < ActiveRecord::Base
+class recipetables < ActiveRecord::Base
 end
 
-Rubyist.create()
-Rubyist.create()
-Rubyist.create()
+recipetables.create()
+recipetables.create()
+recipetables.create()
 
 
 
