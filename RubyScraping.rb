@@ -7,14 +7,12 @@ $arr1 = Array.new
 $arr2 = Array.new
 doc = Nokogiri::HTML(open('http://www.simplyrecipes.com/index/'))
 
-doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content", " " ))]//p/a/@href').each_with_index do |node, i|
+doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content", " " ))]//p/a/@href').each_with_index do |node|
    $arr2 << node.text
-  break if i == 10;
  end
 
-doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content", " " ))]//p/a').each_with_index do |node, i|
+doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content", " " ))]//p/a').each_with_index do |node|
    $arr1 << node.text
-  break if i == 10;
  end
 
 #$arr1.each do |a1|
@@ -26,13 +24,18 @@ doc.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "entry-content"
 #end
 
 ActiveRecord::Base.establish_connection(
-:adapter=>"mysql",
+:adapter=>"mysql2",
 :host=>"localhost",
-:database=>"recipes"
+:database=>"recipes",
+:username=>"saroj",
+:password=>"saroj"
 )
 
 class recipetable < ActiveRecord::Base
 end
-for i in 1..10
-recipetable.create(:id => #{i}, :recipe_list => "arr1[#{i}]")
+$i=0
+while $i<500 do
+$val=$a1.at($i)
+recipetable.create(:id => #$i, :recipe_list => "#$val")
+$i +=1
 end
